@@ -229,6 +229,16 @@ h2 {
   margin-top: 0;
 }
 
+.project-shot {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.85rem;
+  background: var(--surface-solid);
+}
+
 .meta {
   color: var(--muted);
   font-size: 0.94rem;
