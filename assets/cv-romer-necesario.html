@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romer Necesario CV</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+
+      :root {
+        --text: #172033;
+        --muted: #5b6785;
+        --line: #d9dfef;
+        --accent: #3056d3;
+        --accent-soft: #eef3ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        background: #ffffff;
+      }
+
+      body {
+        font-size: 11.2px;
+        line-height: 1.45;
+      }
+
+      .page {
+        width: 100%;
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 1.6fr 140px;
+        gap: 18px;
+        align-items: center;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .title {
+        margin: 0 0 3px;
+        font-size: 29px;
+        line-height: 1.1;
+      }
+
+      .role {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        color: var(--muted);
+      }
+
+      .photo {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+      }
+
+      .summary {
+        margin: 14px 0 0;
+        color: var(--text);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.55fr 0.95fr;
+        gap: 18px;
+        margin-top: 16px;
+      }
+
+      .section {
+        margin-bottom: 14px;
+        break-inside: avoid;
+      }
+
+      .section-title {
+        margin: 0 0 8px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .item {
+        margin-bottom: 12px;
+      }
+
+      .item:last-child {
+        margin-bottom: 0;
+      }
+
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 3px;
+      }
+
+      .item-title {
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .item-meta {
+        color: var(--muted);
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .item-subtitle {
+        margin: 0 0 5px;
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 16px;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .pill {
+        padding: 4px 7px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        border: 1px solid #d9e4ff;
+        font-size: 10.4px;
+      }
+
+      .project {
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        margin-bottom: 8px;
+      }
+
+      .project:last-child {
+        margin-bottom: 0;
+      }
+
+      .project strong {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 11.5px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .small {
+        font-size: 10.4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div>
+          <h1 class="title">Romer Necesario</h1>
+          <p class="role">Senior Full Stack Developer</p>
+          <div class="contact">
+            <span>blast.romer@gmail.com</span>
+            <span>+63 915 263 3870</span>
+            <span>Bacolod City, Philippines</span>
+            <span>github.com/blastromer</span>
+          </div>
+          <p class="summary">
+            Full stack web engineer with 12 years of PHP experience, 9 years in Laravel,
+            7 years working with Webflow, WordPress, and Wix, and 3 years in Golang.
+            Strong background in scalable e-commerce systems, API integrations,
+            microservices, reporting tools, and high-volume backend workflows using
+            Laravel, Symfony, Yii, Node.js, MySQL, MongoDB, Vue.js, React.js, and Next.js.
+          </p>
+        </div>
+        <img src="./profile.jpg" alt="Romer Necesario" class="photo" />
+      </header>
+
+      <div class="grid">
+        <section>
+          <div class="section">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="item">
+              <div class="item-header">
+                <div class="item-title">Senior &amp; Full Stack Developer</div>
+                <div class="item-meta">Apr 2023 - Present</div>
+              </div>
+              <p class="item-subtitle">G. O. Green Enterprises, Inc</p>
+              <ul>
+                <li>Lead third-party API integrations for Amazon, eBay, and Houzz from design through deployment.</li>
+                <li>Build Laravel backend systems with queues, caching, Eloquent ORM, and automation for large inventory feeds.</li>
+                <li>Create reporting and system health tools while maintaining MySQL and MongoDB data reliability.</li>
+                <li>Collaborate on Vue.js and React.js frontends for responsive e-commerce experiences.</li>
+                <li>Contribute to service-oriented and API-driven architectures for scalable commerce workflows.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <div class="item-title">Senior Full Stack Developer</div>
+                <div class="item-meta">Present</div>
+              </div>
+              <p class="item-subtitle">DevDen / GO Green Enterprise Inc</p>
+              <ul>
+                <li>Contribute to modern web applications and backend integrations for production business systems.</li>
+                <li>Support full-stack delivery across API, data, and frontend implementation work.</li>
+                <li>Build and support projects using modern frontend frameworks and maintainable backend services.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <div class="item-title">Full Stack Web Developer</div>
+                <div class="item-meta">Apr 2012 - Mar 2023</div>
+              </div>
+              <p class="item-subtitle">Codedaddy.ph</p>
+              <ul>
+                <li>Grew from junior to senior developer while building frontend interfaces with HTML, CSS, Bootstrap, JavaScript, jQuery, and AJAX.</li>
+                <li>Developed scalable Laravel applications and led REST API integrations with Amazon, eBay, and Houzz.</li>
+                <li>Delivered end-to-end solutions using Laravel, Yii, Vue.js, React.js, Next.js, and MySQL.</li>
+                <li>Built and maintained websites and landing pages in WordPress, Webflow, and Wix for around 7 years.</li>
+                <li>Worked on Pacific Prep WMS, a multi-tenant warehouse management system using Yii for the backend and React for the frontend.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="item-header">
+                <div class="item-title">Junior Software Developer</div>
+                <div class="item-meta">May 2011 - Jun 2012</div>
+              </div>
+              <p class="item-subtitle">Llevante Outsourcing</p>
+              <ul>
+                <li>Worked with PHP, Joomla, and VB/C#.NET on content management, custom applications, and integrations.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Selected Projects</h2>
+
+            <div class="project">
+              <strong>PlumbersStock</strong>
+              <div class="muted small">Large-scale e-commerce platform with backend integrations, inventory synchronization, and automation workflows.</div>
+            </div>
+
+            <div class="project">
+              <strong>PlumbersStock PH</strong>
+              <div class="muted small">Localized commerce implementation supporting catalog, sales, and operational workflows.</div>
+            </div>
+
+            <div class="project">
+              <strong>POS System</strong>
+              <div class="muted small">Modern point-of-sale application with inventory, reporting, and multi-user workflows.</div>
+            </div>
+
+            <div class="project">
+              <strong>Microservices Commerce Platform</strong>
+              <div class="muted small">Built API-driven commerce features using Symfony for backend microservices and Next.js for the frontend experience.</div>
+            </div>
+
+            <div class="project">
+              <strong>Pacific Prep WMS Multi-Tenant</strong>
+              <div class="muted small">Built and supported a multi-tenant warehouse management system for Pacific Prep using Yii as the backend framework and React for the frontend. Worked on tenant-aware workflows, inventory operations, order processing, and maintainable admin tools for daily warehouse activities.</div>
+            </div>
+          </div>
+        </section>
+
+        <aside>
+          <div class="section">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="pill-list">
+              <span class="pill">PHP</span>
+              <span class="pill">Laravel</span>
+              <span class="pill">Symfony</span>
+              <span class="pill">Yii</span>
+              <span class="pill">Golang</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Vue.js</span>
+              <span class="pill">React.js</span>
+              <span class="pill">Next.js</span>
+              <span class="pill">Livewire</span>
+              <span class="pill">WordPress</span>
+              <span class="pill">Webflow</span>
+              <span class="pill">Wix</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">MongoDB</span>
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">REST APIs</span>
+              <span class="pill">GraphQL</span>
+              <span class="pill">Redis</span>
+              <span class="pill">Git / GitHub</span>
+              <span class="pill">AWS / Azure</span>
+              <span class="pill">Team Leadership</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="item">
+              <div class="item-title">Master's in Information Technology</div>
+              <p class="item-subtitle">University of Recoletos De Bacolod · Apr 2023</p>
+            </div>
+            <div class="item">
+              <div class="item-title">Bachelor of Science in Computer Science</div>
+              <p class="item-subtitle">North Negros College · Apr 2007 - May 2011</p>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Strengths</h2>
+            <ul>
+              <li>API integration leadership</li>
+              <li>Scalable Laravel architecture</li>
+              <li>E-commerce automation</li>
+              <li>Cross-functional collaboration</li>
+              <li>Critical thinking and ownership</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Languages</h2>
+            <p class="muted">English, Filipino</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
