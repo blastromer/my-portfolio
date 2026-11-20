@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f3f6ff;
+  --foreground: #12182f;
+  --muted: #526086;
+  --card: rgb(255 255 255 / 0.9);
+  --line: rgb(80 100 170 / 0.16);
+  --soft: rgb(18 24 48 / 0.04);
+  --header: rgb(243 246 255 / 0.9);
+  --good: #159a62;
+  --spot-1: rgb(140 120 255 / 0.35);
+  --spot-2: rgb(120 160 255 / 0.28);
+  --spot-3: rgb(140 120 255 / 0.12);
+  color-scheme: light;
+}
+
+.dark {
+  --background: #07091f;
+  --foreground: #f4f7ff;
+  --muted: #aeb6d6;
+  --card: rgb(16 22 54 / 0.78);
+  --line: rgb(156 172 255 / 0.16);
+  --soft: rgb(255 255 255 / 0.04);
+  --header: rgb(7 10 28 / 0.82);
+  --good: #3ee0a0;
+  --spot-1: rgb(108 78 230 / 0.38);
+  --spot-2: rgb(48 86 210 / 0.2);
+  --spot-3: rgb(90 60 200 / 0.16);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-soft: var(--soft);
+  --color-header: var(--header);
+  --color-good: var(--good);
+  --font-sans: var(--font-jakarta);
+}
+
+body {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(900px 480px at 88% -8%, var(--spot-1), transparent 62%),
+    radial-gradient(720px 420px at 8% 12%, var(--spot-2), transparent 58%),
+    radial-gradient(680px 420px at 70% 110%, var(--spot-3), transparent 60%);
+  color: var(--foreground);
+}
