@@ -19,21 +19,24 @@ export function Hero() {
   return (
     <section id="home" className="mx-auto grid w-full max-w-[1180px] items-center gap-8 px-5 pt-12 pb-4 lg:grid-cols-[1.4fr_0.72fr] lg:pt-14">
       <div className="flex flex-col gap-4">
-        <p className="inline-flex w-fit items-center gap-1.5 rounded-full border border-[#9b87ff]/35 bg-[#7c5cff]/12 px-3 py-1 text-sm font-semibold text-[#5b43c7] dark:text-[#d9d0ff]">
+        <p className="inline-flex w-fit items-center gap-1.5 rounded-full border border-[#9b87ff]/35 bg-[#7c5cff]/12 px-3 py-1 text-xs font-bold tracking-[0.08em] text-[#5b43c7] uppercase dark:text-[#d9d0ff]">
           <Icon name="spark" />
-          Hello, I&apos;m Romer
+          Senior Software Engineer
         </p>
-        <h1 className="flex flex-col gap-1 text-5xl leading-none font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-          <span>Senior</span>
+        <h1 className="max-w-[16ch] text-4xl leading-[1.05] font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+          I build and operate{" "}
           <span className="bg-linear-to-r from-[#6d4dff] to-[#3d63f5] bg-clip-text text-transparent dark:from-[#efeaff] dark:via-[#b9a6ff] dark:to-[#7f8dff]">
-            Software Engineer
+            production systems end-to-end.
           </span>
         </h1>
         <p className="font-semibold text-[#3d4d86] dark:text-[#c9d2ff]">
-          PHP · Laravel · Golang · Vue.js · Microservices
+          End-to-End Systems · Cloud · Backend · Architecture
         </p>
         <p className="max-w-[68ch] text-base leading-relaxed text-muted">
-          I design and build scalable web platforms, APIs, and distributed systems — from high-volume e-commerce integrations to cloud-native applications.
+          I design, build, deploy, and scale web platforms, APIs, distributed systems, and e-commerce infrastructure — working across backend engineering, cloud infrastructure, integrations, and production operations.
+        </p>
+        <p className="text-sm font-semibold text-muted">
+          PHP · Laravel · Golang · AWS · Kubernetes · Docker · Kafka · Microservices
         </p>
         <ul className="flex flex-wrap gap-2">
           {chips.map(([mark, tone, label]) => (
@@ -45,14 +48,14 @@ export function Hero() {
         </ul>
         <div className="flex flex-wrap gap-3 pt-1">
           <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-linear-to-b from-[#8d72ff] to-[#6a4dff] px-4 py-2.5 text-sm font-bold text-white shadow-[0_10px_24px_rgb(106_77_255/0.32)]">
-            View Projects
+            View My Work
             <Icon name="arrow" />
           </a>
           <a href="/assets/cv-romer-necesario.pdf" download className="inline-flex items-center rounded-full border border-line bg-soft px-4 py-2.5 text-sm font-bold text-foreground">
             Download CV
           </a>
           <a href="#contact" className="inline-flex items-center rounded-full border border-line bg-soft px-4 py-2.5 text-sm font-bold text-foreground">
-            Contact Me
+            Let&apos;s Talk
           </a>
         </div>
       </div>
@@ -62,10 +65,10 @@ export function Hero() {
           <Image
             src="/assets/profile.jpg"
             alt="Portrait of Romer Necesario"
-            width={640}
-            height={512}
+            width={800}
+            height={800}
             priority
-            className="aspect-[5/4] w-full rounded-[22px] object-cover object-[center_18%]"
+            className="aspect-square w-full rounded-[22px] object-cover object-center"
           />
         </div>
         <ul className="flex flex-col gap-2 text-sm font-semibold text-muted">

@@ -5,11 +5,11 @@ import { Icon } from "@/components/icons";
 
 const links = [
   ["Home", "home"],
-  ["About", "about"],
+  ["Work", "projects"],
   ["Experience", "experience"],
-  ["Projects", "projects"],
-  ["Skills", "skills"],
   ["Architecture", "architecture"],
+  ["Skills", "skills"],
+  ["About", "about"],
   ["Contact", "contact"],
 ] as const;
 

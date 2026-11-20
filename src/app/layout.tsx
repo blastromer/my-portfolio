@@ -9,10 +9,33 @@ const jakarta = Plus_Jakarta_Sans({
 
 const themeScript = `(function(){try{var t=localStorage.getItem("romer-theme");document.documentElement.classList.toggle("dark",t!=="light");}catch(e){}})();`;
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Romer Necesario | Senior Software Engineer",
+  metadataBase: new URL(siteUrl),
+  title: "Romer Necesario | Senior Software Engineer | Laravel, Golang, AWS & Cloud",
   description:
-    "Romer Necesario — Senior Software Engineer in Bacolod City. PHP, Laravel, Golang, Vue.js, and microservices for high-volume e-commerce and distributed systems.",
+    "Senior Software Engineer specializing in Laravel, Golang, APIs, microservices, AWS, Kubernetes, e-commerce platforms, and production systems.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Romer Necesario | Senior Software Engineer",
+    description:
+      "I build and operate production systems end-to-end — architecture, backend, integrations, cloud infrastructure, and scaling.",
+    url: "/",
+    siteName: "Romer Necesario Portfolio",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Romer Necesario | Senior Software Engineer",
+    description:
+      "End-to-end systems engineer specializing in Laravel, Golang, APIs, cloud infrastructure, and production operations.",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
