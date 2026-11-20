@@ -15,16 +15,16 @@ const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Romer Necesario | Senior Software Engineer | Laravel, Golang, AWS & Cloud",
+  title: "Romer Necesario | Senior Full Stack Developer | Next.js, Laravel & Cloud",
   description:
-    "Senior Software Engineer specializing in Laravel, Golang, APIs, microservices, AWS, Kubernetes, e-commerce platforms, and production systems.",
+    "Senior Full Stack Developer specializing in Next.js, PostgreSQL, Supabase, Laravel, Golang, marketplace integrations, and production systems.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Romer Necesario | Senior Software Engineer",
+    title: "Romer Necesario | Senior Full Stack Developer",
     description:
-      "I build and operate production systems end-to-end — architecture, backend, integrations, cloud infrastructure, and scaling.",
+      "I build and operate production systems end-to-end — Next.js apps, APIs, marketplace integrations, and cloud infrastructure.",
     url: "/",
     siteName: "Romer Necesario Portfolio",
     type: "website",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Romer Necesario | Senior Software Engineer",
+    title: "Romer Necesario | Senior Full Stack Developer",
     description:
-      "End-to-end systems engineer specializing in Laravel, Golang, APIs, cloud infrastructure, and production operations.",
+      "Senior Full Stack Developer specializing in Next.js, Laravel, Golang, APIs, and production systems.",
   },
 };
 

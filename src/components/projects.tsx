@@ -25,20 +25,7 @@ function Chrome() {
   );
 }
 
-const services = ["Users Service", "Catalog Service", "Cart Service", "Orders Service", "Shipping Service"];
-
-const amazonChallenges = [
-  "API throttling",
-  "Large-volume processing",
-  "Asynchronous jobs",
-  "Listing synchronization",
-  "Pricing synchronization",
-  "Inventory synchronization",
-  "Order workflows",
-  "Retry / failure handling",
-  "Production monitoring",
-  "Cloud-hosted infrastructure",
-];
+const services = ["Catalog", "Orders", "Inventory", "Marketplace", "Fulfillment"];
 
 export function Projects() {
   return (
@@ -46,7 +33,7 @@ export function Projects() {
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div className="flex flex-col gap-1">
           <h2 className="text-2xl font-bold tracking-tight">Featured Work</h2>
-          <p className="text-sm text-muted">Selected systems that show architecture, integrations, and production ownership.</p>
+          <p className="text-sm text-muted">Selected systems from the current resume — e-commerce, WMS, SaaS, and marketplace integrations.</p>
         </div>
         <a href="#all-projects" className="inline-flex items-center gap-1 text-sm font-bold text-[#3550d6] dark:text-[#9eb6ff]">
           View All Projects
@@ -58,60 +45,35 @@ export function Projects() {
         <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="flex flex-col gap-3">
             <p className="text-xs font-bold tracking-[0.08em] text-[#b7a6ff] uppercase">Primary Case Study</p>
-            <h3 className="text-2xl font-bold tracking-tight">Amazon Marketplace Integration Platform</h3>
-            <p className="text-sm font-semibold text-[#44527f] dark:text-[#c5cdf0]">
-              Laravel · Golang · Amazon APIs · Queues · MySQL
+            <h3 className="text-2xl font-bold tracking-tight">
+              <a href="https://www.plumbersstock.com" target="_blank" rel="noopener noreferrer" className="text-foreground">
+                PlumbersStock
+              </a>
+            </h3>
+            <p className="text-xs font-semibold text-[#44527f] dark:text-[#c5cdf0]">
+              Next.js · Golang · Symfony · Amazon SP-API · eBay · Shopify
             </p>
             <p className="text-sm text-muted">
-              High-volume marketplace automation for listings, pricing, inventory, and orders.
+              U.S. plumbing-supply e-commerce platform with a Next.js frontend and Golang / Symfony microservice APIs for catalog, orders, inventory, and marketplace data exchange.
             </p>
-            <Tags items={["140K+ Marketplace Items", "High-volume async processing", "Listing · Pricing · Inventory · Orders"]} />
+            <Tags items={["eCommerce", "Microservices", "Amazon SP-API", "SKU mapping"]} />
             <div className="grid gap-3 pt-1 sm:grid-cols-2">
               <div className="rounded-xl border border-line bg-soft p-3">
-                <h4 className="text-sm font-bold">The Problem</h4>
+                <h4 className="text-sm font-bold">Scope</h4>
                 <p className="mt-1 text-xs leading-relaxed text-muted">
-                  Marketplace operations need reliable synchronization of product data, pricing, inventory, listings, and orders between internal systems and Amazon.
+                  Marketplace and inventory platform covering Amazon SP-API, eBay, and Shopify connectors, order flows, product feeds, and SKU mapping.
                 </p>
               </div>
               <div className="rounded-xl border border-line bg-soft p-3">
-                <h4 className="text-sm font-bold">The Approach</h4>
+                <h4 className="text-sm font-bold">Delivery</h4>
                 <p className="mt-1 text-xs leading-relaxed text-muted">
-                  Built and maintained queue-driven workflows to process large marketplace workloads without blocking web requests, while separating integration concerns from core application logic.
+                  Ship Next.js storefront and admin experiences; integrate Redis caching, queues, and MySQL/MongoDB workflows with production monitoring for high-volume traffic.
                 </p>
               </div>
             </div>
-            <div>
-              <h4 className="mb-2 text-sm font-bold">Engineering Challenges</h4>
-              <ul className="flex flex-wrap gap-1.5">
-                {amazonChallenges.map((item) => (
-                  <li key={item} className="rounded-full border border-line bg-soft px-2.5 py-1 text-[11px] font-semibold text-muted">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="mb-2 text-sm font-bold">Ownership</h4>
-              <p className="text-xs leading-relaxed text-muted">
-                Business requirements → Architecture → Application development → Amazon API integration → Queues / workers → Infrastructure → Deployment → Monitoring → Production troubleshooting
-              </p>
-            </div>
           </div>
-          <div className="h-full min-h-[220px] rounded-2xl border border-line bg-[#eef3ff]" aria-hidden="true">
-            <Chrome />
-            <div className="grid grid-cols-2 gap-2 px-3 pt-3 text-[#1d2748] sm:grid-cols-3">
-              {[["140K+", "Items"], ["Listings", "Sync"], ["Pricing", "Jobs"], ["Inventory", "Feeds"], ["Orders", "Flows"], ["Queues", "Workers"]].map(([value, label]) => (
-                <div key={`${value}-${label}`} className="rounded-xl bg-white px-3 py-2">
-                  <b className="block text-sm">{value}</b>
-                  <small className="text-[#7080a8]">{label}</small>
-                </div>
-              ))}
-            </div>
-            <div className="mx-3 mt-3 flex h-16 items-end gap-1.5 rounded-xl bg-white px-3 py-2">
-              {["45%", "62%", "48%", "78%", "58%", "84%", "52%", "70%"].map((height) => (
-                <i key={height} className="block flex-1 rounded-t bg-linear-to-b from-[#7c8cff] to-[#5b6cf0]" style={{ height }} />
-              ))}
-            </div>
+          <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-line">
+            <Image src="/assets/plumbersstock.jpg" alt="PlumbersStock storefront" fill sizes="(min-width: 1024px) 420px, 100vw" className="object-cover object-top" />
           </div>
         </div>
       </article>
@@ -139,50 +101,49 @@ export function Projects() {
               <h3 className="font-bold">
                 <a href="https://pacificprepwms.com" target="_blank" rel="noopener noreferrer" className="text-foreground">Pacific Prep WMS</a>
               </h3>
-              <p className="text-xs font-semibold text-[#44527f] dark:text-[#c5cdf0]">Yii · React · MySQL · APIs</p>
+              <p className="text-xs font-semibold text-[#44527f] dark:text-[#c5cdf0]">React · Yii · Laravel · Amazon SP-API</p>
               <p className="text-sm text-muted">
-                Multi-tenant warehouse management and fulfillment platform covering inventory, orders, warehouse workflows, and operational admin tools.
+                Custom 3PL / Amazon FBA warehouse system for receiving, bins/LPN, pick/pack/ship, returns, billing, and client operations.
               </p>
-              <Tags items={["Multi-tenant", "Inventory", "Fulfillment", "Production support"]} />
+              <Tags items={["3PL / WMS", "FBA", "Shopify", "ShipStation"]} />
             </div>
           </article>
 
           <article className={card}>
             <div className="flex h-[148px] flex-col gap-1.5 border-b border-line bg-[#eef3ff] p-2.5 text-center text-xs font-bold text-[#31406e]" aria-hidden="true">
               <span className="grid flex-1 place-items-center rounded-lg bg-white">Next.js</span>
-              <span className="grid flex-1 place-items-center rounded-lg bg-[#ece7ff]">API Gateway</span>
+              <span className="grid flex-1 place-items-center rounded-lg bg-[#ece7ff]">Supabase / PostgreSQL</span>
               <span className="grid flex-1 grid-cols-3 gap-1.5">
-                <span className="grid place-items-center rounded-lg bg-white">Users</span>
-                <span className="grid place-items-center rounded-lg bg-white">Orders</span>
-                <span className="grid place-items-center rounded-lg bg-white">Queues</span>
+                <span className="grid place-items-center rounded-lg bg-white">Auth</span>
+                <span className="grid place-items-center rounded-lg bg-white">RLS</span>
+                <span className="grid place-items-center rounded-lg bg-white">Stripe</span>
               </span>
-              <span className="grid flex-1 place-items-center rounded-lg bg-white">MySQL / MongoDB</span>
+              <span className="grid flex-1 place-items-center rounded-lg bg-white">Dashboards · Reporting</span>
             </div>
             <div className="flex flex-col gap-2 p-4">
-              <h3 className="font-bold">Commerce Microservices Platform</h3>
-              <p className="text-xs font-semibold text-[#44527f] dark:text-[#c5cdf0]">Symfony · Laravel · Next.js · Queues</p>
+              <h3 className="font-bold">
+                <a href="https://app.yoursafetyportal.com.au" target="_blank" rel="noopener noreferrer" className="text-foreground">Your Safety Partners</a>
+              </h3>
+              <p className="text-xs font-semibold text-[#44527f] dark:text-[#c5cdf0]">Next.js · PostgreSQL · Supabase · Stripe</p>
               <p className="text-sm text-muted">
-                API-driven commerce features with service-oriented backend work and a Next.js frontend experience.
+                Production SaaS portal with role-based access, dashboards, inspection/reporting, Stripe payments, and an iOS wrapper for App Store distribution.
               </p>
-              <Tags items={["Microservices", "API-driven", "Example architecture"]} />
+              <Tags items={["SaaS", "RBAC", "Payments"]} />
             </div>
           </article>
 
           <article className={`${card} sm:col-span-2`}>
-            <div className="grid gap-0 sm:grid-cols-[220px_1fr]">
-              <div className="relative h-[160px] border-b border-line sm:h-auto sm:border-r sm:border-b-0">
-                <Image src="/assets/plumbersstock.jpg" alt="PlumbersStock storefront showing a Moen shower campaign" fill sizes="(min-width: 640px) 220px, 100vw" className="object-cover object-top" />
-              </div>
-              <div className="flex flex-col gap-2 p-4">
+            <div className="flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-2">
                 <h3 className="font-bold">
-                  <a href="https://www.plumbersstock.com" target="_blank" rel="noopener noreferrer" className="text-foreground">PlumbersStock</a>
+                  <a href="https://sgc-smarttrack.com" target="_blank" rel="noopener noreferrer" className="text-foreground">SGC SmartTrack</a>
                 </h3>
-                <p className="text-xs font-semibold text-[#44527f] dark:text-[#c5cdf0]">Laravel · Vue.js · MySQL</p>
+                <p className="text-xs font-semibold text-[#44527f] dark:text-[#c5cdf0]">Laravel · Assessment management</p>
                 <p className="text-sm text-muted">
-                  Large-scale e-commerce platform with backend integrations, inventory synchronization, and automation workflows.
+                  Laravel assessment management system for tracking assessments, workflows, and related operational records.
                 </p>
-                <Tags items={["E-commerce", "Integrations", "Inventory sync"]} />
               </div>
+              <Tags items={["Laravel", "Workflows"]} />
             </div>
           </article>
         </div>
@@ -191,24 +152,24 @@ export function Projects() {
           <div className="flex flex-col gap-1">
             <h2 className="text-lg font-bold tracking-tight">How I Think About Systems</h2>
             <p className="text-xs text-muted">
-              Example system architecture. Architecture varies by requirements — this diagram shows patterns I work with.
+              Example architecture aligned with the PlumbersStock-style stack. Architecture varies by requirements.
             </p>
           </div>
           <div className="flex flex-1 flex-col items-center justify-between gap-2">
             <div className="grid w-full grid-cols-2 gap-2">
               <div className="flex items-center justify-center gap-2 rounded-xl border border-line px-2 py-3 text-center text-xs font-bold">
                 <b className="grid size-6 place-items-center rounded-md bg-[#111827] text-white">N</b>
-                <span>Next.js<small className="block font-semibold text-muted">Frontend</small></span>
+                <span>Next.js<small className="block font-semibold text-muted">Storefront / Admin</small></span>
               </div>
               <div className="flex items-center justify-center gap-2 rounded-xl border border-line px-2 py-3 text-center text-xs font-bold">
-                <b className="grid size-6 place-items-center rounded-md bg-[#41b883] text-white">V</b>
-                <span>Vue.js<small className="block font-semibold text-muted">Admin / App</small></span>
+                <b className="grid size-6 place-items-center rounded-md bg-[#00add8] text-white">Go</b>
+                <span>Golang<small className="block font-semibold text-muted">Services</small></span>
               </div>
             </div>
             <div className="min-h-4 w-0.5 flex-1 bg-[#96a8ff]/55" />
             <div className="w-[78%] rounded-xl border border-[#9682ff]/40 bg-[#6d5efc]/15 px-3 py-3 text-center text-xs font-bold">
-              API Gateway
-              <small className="block font-semibold text-muted">Symfony / Laravel</small>
+              API Layer
+              <small className="block font-semibold text-muted">Symfony / Golang / Laravel</small>
             </div>
             <div className="min-h-4 w-0.5 flex-1 bg-[#96a8ff]/55" />
             <div className="grid w-full grid-cols-3 gap-1.5 sm:grid-cols-5">
@@ -221,11 +182,11 @@ export function Projects() {
             </div>
             <div className="min-h-4 w-0.5 flex-1 bg-[#96a8ff]/55" />
             <div className="grid w-full grid-cols-2 gap-2">
-              <div className="rounded-xl border border-line bg-[#8b5cf6]/15 px-2 py-3 text-center text-xs font-bold">Kafka / Queues</div>
+              <div className="rounded-xl border border-line bg-[#8b5cf6]/15 px-2 py-3 text-center text-xs font-bold">Redis / Queues</div>
               <div className="rounded-xl border border-line bg-[#3b82f6]/15 px-2 py-3 text-center text-xs font-bold">MySQL / MongoDB</div>
             </div>
             <div className="w-full rounded-xl border border-line bg-soft px-2 py-2 text-center text-[11px] font-semibold text-muted">
-              AWS · Docker · Kubernetes · Linux · Nginx
+              AWS EC2/RDS · Docker · Nginx · Linux · CI/CD
             </div>
           </div>
         </aside>
@@ -233,7 +194,7 @@ export function Projects() {
 
       <div id="systems" className="scroll-mt-24 rounded-2xl border border-line bg-card p-5 shadow-[0_18px_40px_rgb(3_6_22/0.12)]">
         <h2 className="text-2xl font-bold tracking-tight">Systems I&apos;ve Built &amp; Operated</h2>
-        <p className="mt-1 text-sm text-muted">Breadth of systems ownership across commerce, warehouse, and integration platforms.</p>
+        <p className="mt-1 text-sm text-muted">Systems listed on the current resume.</p>
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full text-left text-sm">
             <thead>
@@ -244,12 +205,12 @@ export function Projects() {
             </thead>
             <tbody>
               {[
-                ["Amazon Marketplace Platform", "140K+ marketplace items"],
-                ["Pacific Prep WMS", "Multi-tenant warehouse & fulfillment"],
-                ["Commerce Microservices", "API-driven distributed architecture"],
-                ["PlumbersStock", "E-commerce & integrations"],
-                ["Marketplace Integrations", "Amazon / eBay / Houzz"],
-                ["POS Platform", "Inventory, reporting, multi-user workflows"],
+                ["PlumbersStock", "Next.js storefront + Golang/Symfony marketplace microservices"],
+                ["Pacific Prep WMS", "Amazon FBA / 3PL warehouse & fulfillment"],
+                ["Your Safety Partners", "Next.js + Supabase SaaS portal"],
+                ["SGC SmartTrack", "Laravel assessment management"],
+                ["PlumbersStock PH", "WordPress WooCommerce local-market storefront"],
+                ["Marketplace Integrations", "Amazon SP-API / eBay / Shopify / Houzz"],
               ].map(([system, scope]) => (
                 <tr key={system} className="border-b border-line/70">
                   <td className="py-2.5 pr-4 font-semibold">{system}</td>
@@ -270,28 +231,13 @@ export function Projects() {
             </div>
             <div className="flex flex-col gap-2 p-4">
               <h3 className="font-bold"><a className="text-foreground" href="https://www.plumbersstock.ph" target="_blank" rel="noopener noreferrer">PlumbersStock PH</a></h3>
-              <p className="text-sm text-muted">Localized commerce implementation supporting catalog, sales, and operational workflows.</p>
+              <p className="text-sm text-muted">WordPress WooCommerce storefront for the Philippine market, including catalog, checkout, and local e-commerce operations.</p>
             </div>
           </article>
           <article className={card}>
-            <div className="relative h-[148px] border-b border-line">
-              <Image src="/assets/pos-system.jpg" alt="POS System marketing page" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover object-top" />
-            </div>
-            <div className="flex flex-col gap-2 p-4">
-              <h3 className="font-bold"><a className="text-foreground" href="https://pos-synchronous-main-vilglr.laravel.cloud/" target="_blank" rel="noopener noreferrer">POS System</a></h3>
-              <p className="text-sm text-muted">Point-of-sale solution with inventory, reporting, and multi-user workflows.</p>
-            </div>
-          </article>
-          <article className={card}>
-            <div className="flex min-h-28 flex-col gap-2 p-4">
-              <h3 className="font-bold"><a className="text-foreground" href="https://craftdirect.com" target="_blank" rel="noopener noreferrer">CraftDirect</a></h3>
-              <p className="text-sm text-muted">E-commerce platform support and operational engineering work.</p>
-            </div>
-          </article>
-          <article className={card}>
-            <div className="flex min-h-28 flex-col gap-2 p-4">
-              <h3 className="font-bold"><a className="text-foreground" href="https://plumbersstockexpress.com" target="_blank" rel="noopener noreferrer">PlumbersStock Express</a></h3>
-              <p className="text-sm text-muted">Web operations, integrations, and ongoing improvements.</p>
+            <div className="flex min-h-[148px] flex-col justify-center gap-2 p-4">
+              <h3 className="font-bold"><a className="text-foreground" href="https://sgc-smarttrack.com" target="_blank" rel="noopener noreferrer">SGC SmartTrack</a></h3>
+              <p className="text-sm text-muted">Laravel assessment management system for tracking assessments, workflows, and operational records.</p>
             </div>
           </article>
         </div>

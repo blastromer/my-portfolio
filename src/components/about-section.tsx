@@ -1,126 +1,124 @@
 import { Icon, type IconName } from "@/components/icons";
+import { CV_DOWNLOAD_NAME, CV_HREF, EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/site";
 
 const checks = [
   "System Design & Architecture",
-  "Backend Engineering",
+  "Full-Stack Engineering",
+  "Marketplace Integrations",
   "Cloud & Infrastructure",
-  "Integrations",
-  "Performance & Reliability",
-  "Business-focused Engineering",
-  "Team Collaboration & Mentoring",
+  "Data / Auth with Supabase",
+  "Business-focused Delivery",
+  "Clear stakeholder communication",
 ];
 
 const groups = [
   {
-    title: "Backend",
+    title: "Next.js Stack",
     items: [
-      ["PHP", "bg-[#777bb4]", "PHP"],
-      ["La", "bg-[#ff2d20]", "Laravel"],
-      ["Go", "bg-[#00add8]", "Golang"],
-      ["JS", "bg-[#3c873a]", "Node.js"],
-      ["Sy", "bg-[#1a171b]", "Symfony"],
-    ],
-  },
-  {
-    title: "Frontend",
-    items: [
-      ["V", "bg-[#41b883]", "Vue.js"],
-      ["Re", "bg-[#149eca]", "React"],
       ["Nx", "bg-[#111827]", "Next.js"],
-      ["JS", "bg-[#f7df1e] text-[#222]", "JavaScript"],
-      ["In", "bg-[#9553e9]", "Inertia"],
-      ["Lw", "bg-[#fb70a9]", "Livewire"],
+      ["TS", "bg-[#3178c6]", "TypeScript"],
+      ["Re", "bg-[#149eca]", "React"],
+      ["TW", "bg-[#38bdf8]", "Tailwind"],
     ],
   },
   {
-    title: "Architecture",
+    title: "Data / Backend",
     items: [
-      ["MS", "bg-[#6d5efc]", "Microservices"],
-      ["API", "bg-[#3b82f6]", "REST APIs"],
-      ["GW", "bg-[#8b5cf6]", "API Gateways"],
-      ["ED", "bg-[#14b8a6]", "Event-Driven"],
-      ["MT", "bg-[#f59e0b]", "Multi-Tenant"],
-    ],
-  },
-  {
-    title: "Infrastructure",
-    items: [
-      ["Dk", "bg-[#2496ed]", "Docker"],
-      ["K8", "bg-[#326ce5]", "Kubernetes"],
-      ["AWS", "bg-[#ff9900] text-[#1b1b1b]", "AWS"],
-      ["Ng", "bg-[#009639]", "Nginx"],
-      ["Li", "bg-[#111]", "Linux"],
-    ],
-  },
-  {
-    title: "Data & Messaging",
-    items: [
+      ["PG", "bg-[#336791]", "PostgreSQL"],
+      ["Sb", "bg-[#3ecf8e]", "Supabase"],
       ["SQL", "bg-[#00758f]", "MySQL"],
       ["Mg", "bg-[#10aa50]", "MongoDB"],
       ["Rd", "bg-[#d82c20]", "Redis"],
-      ["Kf", "bg-[#231f20]", "Kafka"],
-      ["Q", "bg-[#7c5cff]", "Queues"],
+    ],
+  },
+  {
+    title: "Languages",
+    items: [
+      ["JS", "bg-[#f7df1e] text-[#222]", "JavaScript"],
+      ["TS", "bg-[#3178c6]", "TypeScript"],
+      ["PHP", "bg-[#777bb4]", "PHP"],
+      ["Go", "bg-[#00add8]", "Go"],
+      ["Py", "bg-[#3776ab]", "Python"],
+      ["Nd", "bg-[#3c873a]", "Node.js"],
+    ],
+  },
+  {
+    title: "Backend Frameworks",
+    items: [
+      ["La", "bg-[#ff2d20]", "Laravel"],
+      ["Sy", "bg-[#1a171b]", "Symfony"],
+      ["Ne", "bg-[#e0234e]", "NestJS"],
+      ["Gi", "bg-[#00add8]", "Gin"],
+      ["AP", "bg-[#6d5efc]", "REST / GraphQL"],
     ],
   },
   {
     title: "Integrations",
     items: [
-      ["Am", "bg-[#ff9900] text-[#1b1b1b]", "Amazon APIs"],
+      ["Am", "bg-[#ff9900] text-[#1b1b1b]", "Amazon SP-API"],
       ["eB", "bg-[#e53238]", "eBay"],
+      ["Sh", "bg-[#95bf47]", "Shopify"],
       ["Hz", "bg-[#4bbf73]", "Houzz"],
-      ["GA", "bg-[#f9ab00] text-[#1b1b1b]", "Google APIs"],
-      ["WH", "bg-[#0ea5e9]", "Webhooks"],
+      ["St", "bg-[#635bff]", "Stripe"],
+    ],
+  },
+  {
+    title: "DevOps / Cloud",
+    items: [
+      ["AWS", "bg-[#ff9900] text-[#1b1b1b]", "AWS EC2/RDS"],
+      ["Dk", "bg-[#2496ed]", "Docker"],
+      ["Ng", "bg-[#009639]", "Nginx"],
+      ["Li", "bg-[#111]", "Linux"],
+      ["Ve", "bg-[#111827]", "Vercel"],
     ],
   },
 ];
 
 const roles = [
   {
-    title: "Senior Full Stack Developer",
-    company: "DevDen",
-    when: "Present",
+    title: "Full-Cycle Software Engineer",
+    company: "Pacific Prep WMS",
+    when: "2025 – Present",
     current: true,
+    meta: "https://pacificprepwms.com · 3PL / Amazon FBA",
     points: [
-      "Contribute to modern web applications and backend integrations for production business systems.",
-      "Support full-stack delivery across API, data, and frontend implementation work.",
-      "Integrate third-party business systems using REST/GraphQL APIs and webhooks, including automation workflows.",
+      "Develop and maintain a custom 3PL/WMS for Amazon FBA and e-commerce fulfillment: receiving, bins/locations, LPN, pick/pack/ship, returns, billing, and client operations.",
+      "Build Amazon SP-API workflows for FBA inbound shipments, inventory sync, Seller Central, orders/shipments, auth, and rate-limit handling.",
+      "Integrate Shopify, ShipStation, and ScanPower; support scanning, packing, Amazon labels, tracking, and shipment confirmation.",
+      "Run Laravel/PHP APIs, queues, and scheduled jobs on AWS (EC2, RDS) with Docker, Nginx, Linux/Ubuntu, Supervisor, CI/CD, and production troubleshooting.",
     ],
   },
   {
-    title: "Senior Full Stack Developer",
-    company: "G. O. Green Enterprises, Inc.",
+    title: "Senior & Full Stack Developer",
+    company: "G. O. Green Enterprises, Inc. · PlumbersStock",
     when: "Apr 2023 – Present",
     current: true,
+    meta: "www.plumbersstock.com · Remote · Bacolod, PH",
     points: [
-      "Lead third-party API integrations for Amazon, eBay, and Houzz from design through deployment.",
-      "Build Laravel backend systems with queues, caching, and automation for large inventory feeds supporting 140K+ marketplace items.",
-      "Create reporting and system health tools while maintaining MySQL and MongoDB reliability.",
-      "Collaborate on Vue.js and React frontends for responsive e-commerce experiences.",
-      "Troubleshoot production issues across integrations, data sync, background jobs, and performance bottlenecks.",
-      "Support cloud-hosted deployments and Linux debugging across SSH, permissions, logs, and services.",
+      "Lead full-stack delivery for a U.S. plumbing-supply e-commerce platform with a Next.js frontend and Golang / Symfony microservice APIs.",
+      "Design and maintain microservice backends in Golang and Symfony for catalog, orders, inventory, and marketplace data exchange across Amazon SP-API, eBay, and Houzz.",
+      "Ship Next.js storefront and admin experiences; integrate Redis caching, queues, and MySQL/MongoDB workflows with production monitoring for high-volume traffic.",
     ],
   },
   {
-    title: "Full Stack Web Developer",
+    title: "Junior Web Developer → Senior Full Stack Web Developer",
     company: "Codedaddy.ph",
     when: "Apr 2012 – Mar 2023",
     current: false,
+    meta: "Philippines · Remote",
     points: [
-      "Grew from junior to senior while delivering end-to-end web applications and long-term production maintenance.",
-      "Developed scalable Laravel applications and led REST API integrations with Amazon, eBay, and Houzz.",
-      "Delivered solutions across Laravel, Yii, Vue.js, React, Next.js, and MySQL.",
-      "Built and maintained WordPress, Webflow, and Wix sites for around 7 years.",
-      "Worked on Pacific Prep WMS, a multi-tenant warehouse management system using Yii and React.",
+      "Progressed from frontend (HTML5, CSS3, Bootstrap, JavaScript, jQuery, AJAX) to senior Laravel backend and full-stack delivery.",
+      "Built REST APIs, secure admin dashboards, role-based auth, and Amazon/eBay/Houzz/Shopify integrations for production systems.",
     ],
   },
 ] as const;
 
 const production: { icon: IconName; title: string; text: string }[] = [
-  { icon: "rocket", title: "Performance", text: "Application and database optimization." },
-  { icon: "check", title: "Reliability", text: "Queues, workers, retries, monitoring, and failure handling." },
-  { icon: "cloud", title: "Infrastructure", text: "AWS, Docker, Kubernetes, Linux, Nginx." },
+  { icon: "rocket", title: "Performance", text: "Caching, queues, and database workflows for high-volume traffic." },
+  { icon: "check", title: "Reliability", text: "Workers, scheduled jobs, retries, and production monitoring." },
+  { icon: "cloud", title: "Infrastructure", text: "AWS EC2/RDS, Docker, Nginx, Linux, Supervisor, CI/CD." },
   { icon: "code", title: "Troubleshooting", text: "Root-cause analysis across application and infrastructure layers." },
-  { icon: "layers", title: "Scaling", text: "Worker capacity, asynchronous processing, service decomposition, and infrastructure scaling." },
+  { icon: "plug", title: "Integrations", text: "SP-API rate limits, marketplace sync, webhooks, and OAuth flows." },
 ];
 
 const panel = "rounded-2xl border border-line bg-card p-5 shadow-[0_18px_40px_rgb(3_6_22/0.12)]";
@@ -133,7 +131,7 @@ export function AboutSection() {
           <div className="flex flex-col gap-1">
             <p className="text-xs font-bold text-[#b7a6ff]">12+ Years in Software Development</p>
             <h2 className="text-2xl font-bold tracking-tight">Experience</h2>
-            <p className="text-sm text-muted">Increasing technical breadth and ownership from product delivery to marketplace systems and production operations.</p>
+            <p className="text-sm text-muted">Aligned with the current resume — Pacific Prep WMS, PlumbersStock / Green Enterprises, and Codedaddy.</p>
           </div>
           <ol className="relative flex flex-col gap-6 border-l border-line pl-5">
             {roles.map((role) => (
@@ -144,6 +142,7 @@ export function AboutSection() {
                   <span className="text-xs font-bold text-[#7c5cff] dark:text-[#c4b6ff]">{role.when}</span>
                 </div>
                 <p className="text-sm font-semibold text-muted">{role.company}</p>
+                <p className="text-xs text-muted">{role.meta}</p>
                 <ul className="flex flex-col gap-1.5">
                   {role.points.map((point) => (
                     <li key={point} className="text-sm leading-relaxed text-muted">
@@ -183,13 +182,13 @@ export function AboutSection() {
             <h2 className="text-2xl font-bold tracking-tight">About Me</h2>
             <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted">
               <p>
-                I&apos;m a Senior Software Engineer from the Philippines with 12+ years of experience building web applications, APIs, e-commerce platforms, integrations, and distributed systems.
+                I&apos;m a Senior Full Stack Developer from the Philippines with 12+ years building production web applications, APIs, and business systems for U.S. and international clients.
               </p>
               <p>
-                My primary expertise is PHP and Laravel, complemented by Golang, Vue.js, Node.js, Symfony, Docker, Kubernetes, AWS, Kafka, and modern frontend technologies.
+                Strong focus on Next.js with PostgreSQL and Supabase for data, auth, storage, and tenant-aware access — complemented by Laravel/PHP, React, Vue.js, Node.js, and Go.
               </p>
               <p>
-                What differentiates my experience is the ability to work across the entire lifecycle of a system — understanding business requirements, designing architecture, writing software, integrating external platforms, deploying infrastructure, troubleshooting production issues, and scaling systems as requirements grow.
+                I also work across marketplace integrations (Amazon SP-API, eBay, Shopify), role-based dashboards, cloud deployments, and clear communication with non-technical stakeholders.
               </p>
             </div>
             <ul className="flex flex-col gap-2">
@@ -211,7 +210,7 @@ export function AboutSection() {
                 <h3 className="text-xs font-bold tracking-wide text-muted uppercase">{group.title}</h3>
                 <ul className="flex flex-wrap gap-2">
                   {group.items.map(([mark, tone, name]) => (
-                    <li key={name} className="inline-flex items-center gap-1.5 rounded-full border border-line bg-soft py-1 pr-2.5 pl-1 text-xs font-semibold">
+                    <li key={`${group.title}-${name}`} className="inline-flex items-center gap-1.5 rounded-full border border-line bg-soft py-1 pr-2.5 pl-1 text-xs font-semibold">
                       <span className={`grid h-5 min-w-5 place-items-center rounded px-0.5 text-[8px] font-extrabold text-white ${tone}`}>{mark}</span>
                       {name}
                     </li>
@@ -239,7 +238,7 @@ export function AboutSection() {
               Let&apos;s Talk
               <Icon name="arrow" />
             </a>
-            <a href="/assets/cv-romer-necesario.pdf" download className="inline-flex items-center gap-2 rounded-full border border-white/35 px-4 py-2.5 text-sm font-bold text-white">
+            <a href={CV_HREF} download={CV_DOWNLOAD_NAME} className="inline-flex items-center gap-2 rounded-full border border-white/35 px-4 py-2.5 text-sm font-bold text-white">
               Download CV
             </a>
           </div>
@@ -251,22 +250,29 @@ export function AboutSection() {
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
             <p className="text-sm text-muted">
-              Email is the best way to reach me for architecture, backend, integrations, or production systems work.
+              Open to full-time, part-time, and contract remote work. Email is the best way to reach me.
             </p>
             <ul className="flex flex-col gap-3 text-sm">
               <li>
                 Email:{" "}
-                <a className="font-semibold text-[#3550d6] dark:text-[#9eb6ff]" href="mailto:blast.romer@gmail.com">
-                  blast.romer@gmail.com
+                <a className="font-semibold text-[#3550d6] dark:text-[#9eb6ff]" href={`mailto:${EMAIL}`}>
+                  {EMAIL}
+                </a>
+              </li>
+              <li>
+                LinkedIn:{" "}
+                <a className="font-semibold text-[#3550d6] dark:text-[#9eb6ff]" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/romer-necesario-642599146
                 </a>
               </li>
               <li>
                 GitHub:{" "}
-                <a className="font-semibold text-[#3550d6] dark:text-[#9eb6ff]" href="https://github.com/blastromer" target="_blank" rel="noopener noreferrer">
+                <a className="font-semibold text-[#3550d6] dark:text-[#9eb6ff]" href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
                   github.com/blastromer
                 </a>
               </li>
               <li>Location: Bacolod City, Philippines</li>
+              <li>Availability: Immediate · Remote</li>
             </ul>
           </div>
         </div>
@@ -274,15 +280,15 @@ export function AboutSection() {
           <div className="flex flex-col gap-2">
             <h3 className="text-lg font-bold">Ready to talk?</h3>
             <p className="text-sm text-muted">
-              Send a short note about the system, stack, and what you need owned — architecture, delivery, integrations, or production support.
+              Send a short note about the system, stack, and what you need owned — Next.js delivery, marketplace integrations, WMS, or production support.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <a href="mailto:blast.romer@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-linear-to-b from-[#8d72ff] to-[#6a4dff] px-4 py-2.5 text-sm font-bold text-white">
+            <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 rounded-full bg-linear-to-b from-[#8d72ff] to-[#6a4dff] px-4 py-2.5 text-sm font-bold text-white">
               Email Me
               <Icon name="arrow" />
             </a>
-            <a href="/assets/cv-romer-necesario.pdf" download className="inline-flex items-center rounded-full border border-line bg-soft px-4 py-2.5 text-sm font-bold text-foreground">
+            <a href={CV_HREF} download={CV_DOWNLOAD_NAME} className="inline-flex items-center rounded-full border border-line bg-soft px-4 py-2.5 text-sm font-bold text-foreground">
               Download CV
             </a>
           </div>
@@ -291,7 +297,7 @@ export function AboutSection() {
 
       <footer className="mt-10 border-t border-line">
         <p className="mx-auto w-full max-w-[1180px] px-5 py-6 text-sm text-muted">
-          Built by Romer Necesario · Senior Software Engineer
+          Built by Romer Necesario · Senior Full Stack Developer
         </p>
       </footer>
     </>

@@ -18,9 +18,7 @@ Open [http://localhost:3000](http://localhost:3000).
 3. Framework preset: **Next.js**.
 4. Deploy.
 
-## Contact form
+## Assets
 
-1. Create a free form in Formspree.
-2. Copy the endpoint (example: `https://formspree.io/f/abcxyzpq`).
-3. Update the form `action` in `src/components/about-section.tsx`.
-4. Deploy again.
+- Profile image: `public/assets/profile.jpg`
+- CV download: `public/assets/Romer_Necesario_Resume_Merged.pdf`

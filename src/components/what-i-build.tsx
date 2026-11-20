@@ -10,32 +10,32 @@ const services: { icon: IconName; tone: string; title: string; text: string }[] 
   {
     icon: "code",
     tone: "bg-[#d946ef]",
-    title: "Backend Engineering",
-    text: "Build reliable backend systems using PHP, Laravel, Golang, Symfony, and Node.js.",
+    title: "Full-Stack Engineering",
+    text: "Build production apps with Next.js, React, Vue.js, Laravel/PHP, Node.js, and Golang.",
   },
   {
     icon: "cloud",
     tone: "bg-[#3b82f6]",
     title: "Cloud & Infrastructure",
-    text: "Deploy and operate production workloads using AWS, Docker, Kubernetes, Linux, Nginx, and CI/CD.",
+    text: "Deploy and operate workloads on AWS EC2/RDS with Docker, Nginx, Linux, Supervisor, and CI/CD.",
   },
   {
     icon: "plug",
     tone: "bg-[#14b8a6]",
-    title: "Integrations",
-    text: "Connect internal systems with Amazon, eBay, Houzz, fulfillment platforms, and other third-party APIs.",
+    title: "Marketplace Integrations",
+    text: "Connect systems with Amazon SP-API, eBay, Shopify, Houzz, ShipStation, ScanPower, and Stripe.",
   },
   {
     icon: "nodes",
     tone: "bg-[#8b5cf6]",
     title: "Data & Async Processing",
-    text: "Build queue-driven and event-based workflows using Kafka, Redis, workers, and background processing.",
+    text: "Build queue-driven workflows with Redis, workers, scheduled jobs, PostgreSQL, MySQL, and MongoDB.",
   },
   {
     icon: "rocket",
     tone: "bg-[#f59e0b]",
     title: "Production Engineering",
-    text: "Monitor, troubleshoot, optimize, deploy, and scale production systems.",
+    text: "Monitor, troubleshoot, optimize, deploy, and support production systems after release.",
   },
 ];
 
@@ -45,7 +45,7 @@ export function WhatIBuild() {
       <div className="mb-4 flex max-w-2xl flex-col gap-2">
         <h2 className="text-2xl font-bold tracking-tight">What I Do</h2>
         <p className="text-sm text-muted">
-          Capability-focused engineering across architecture, backend, infrastructure, integrations, and production operations.
+          Capability-focused engineering across Next.js apps, APIs, marketplace integrations, cloud infrastructure, and production operations.
         </p>
       </div>
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">

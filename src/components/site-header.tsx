@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Icon } from "@/components/icons";
+import { CV_DOWNLOAD_NAME, CV_HREF } from "@/lib/site";
 
 const links = [
   ["Home", "home"],
@@ -102,8 +103,8 @@ export function SiteHeader() {
             <Icon name="moon" className="size-4 dark:hidden" />
           </button>
           <a
-            href="/assets/cv-romer-necesario.pdf"
-            download
+            href={CV_HREF}
+            download={CV_DOWNLOAD_NAME}
             aria-label="Download Resume"
             className="inline-flex items-center gap-2 rounded-full bg-linear-to-b from-[#8d72ff] to-[#6a4dff] px-3 py-2.5 text-sm font-bold text-white shadow-[0_10px_24px_rgb(106_77_255/0.32)] sm:px-4"
           >

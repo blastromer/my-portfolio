@@ -2,9 +2,9 @@ import { Icon, type IconName } from "@/components/icons";
 
 const stats: { icon: IconName; value: string; label: string }[] = [
   { icon: "clock", value: "12+", label: "Years in Software Engineering" },
-  { icon: "rocket", value: "140K+", label: "Marketplace Items Managed" },
-  { icon: "layers", value: "3+", label: "Years Microservices" },
-  { icon: "nodes", value: "3+", label: "Years Kafka" },
+  { icon: "window", value: "5+", label: "Years Next.js" },
+  { icon: "layers", value: "5+", label: "Years PostgreSQL" },
+  { icon: "cloud", value: "5+", label: "Years Supabase" },
 ];
 
 export function Stats() {

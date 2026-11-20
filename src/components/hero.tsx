@@ -1,18 +1,19 @@
 import Image from "next/image";
 import { Icon } from "@/components/icons";
+import { CV_DOWNLOAD_NAME, CV_HREF } from "@/lib/site";
 
 const chips = [
-  ["PHP", "bg-[#777bb4]", "12+ Years PHP"],
-  ["La", "bg-[#ff2d20]", "9+ Years Laravel"],
-  ["GO", "bg-[#00add8]", "3+ Years Golang"],
-  ["Dk", "bg-[#2496ed]", "8+ Years Docker"],
-  ["K8s", "bg-[#326ce5]", "8+ Years Kubernetes"],
+  ["Nx", "bg-[#111827]", "5+ Years Next.js"],
+  ["PG", "bg-[#336791]", "5+ Years PostgreSQL"],
+  ["Sb", "bg-[#3ecf8e]", "5+ Years Supabase"],
+  ["La", "bg-[#ff2d20]", "Laravel / PHP"],
+  ["Go", "bg-[#00add8]", "Golang"],
 ];
 
 const availability = [
   { icon: "pin" as const, label: "Bacolod City, Philippines" },
   { icon: "laptop" as const, label: "Available for Remote Work" },
-  { icon: "clock" as const, label: "Notice Period: 4 weeks" },
+  { icon: "clock" as const, label: "Available immediately" },
 ];
 
 export function Hero() {
@@ -21,7 +22,7 @@ export function Hero() {
       <div className="flex flex-col gap-4">
         <p className="inline-flex w-fit items-center gap-1.5 rounded-full border border-[#9b87ff]/35 bg-[#7c5cff]/12 px-3 py-1 text-xs font-bold tracking-[0.08em] text-[#5b43c7] uppercase dark:text-[#d9d0ff]">
           <Icon name="spark" />
-          Senior Software Engineer
+          Senior Full Stack Developer
         </p>
         <h1 className="max-w-[16ch] text-4xl leading-[1.05] font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
           I build and operate{" "}
@@ -30,13 +31,10 @@ export function Hero() {
           </span>
         </h1>
         <p className="font-semibold text-[#3d4d86] dark:text-[#c9d2ff]">
-          End-to-End Systems · Cloud · Backend · Architecture
+          Next.js · PostgreSQL · Supabase · Laravel · Golang · Marketplace Integrations
         </p>
         <p className="max-w-[68ch] text-base leading-relaxed text-muted">
-          I design, build, deploy, and scale web platforms, APIs, distributed systems, and e-commerce infrastructure — working across backend engineering, cloud infrastructure, integrations, and production operations.
-        </p>
-        <p className="text-sm font-semibold text-muted">
-          PHP · Laravel · Golang · AWS · Kubernetes · Docker · Kafka · Microservices
+          Senior Full Stack Developer with 12+ years building production web applications, APIs, and business systems for U.S. and international clients — across Next.js, Laravel/PHP, React, Vue.js, Node.js, and Go.
         </p>
         <ul className="flex flex-wrap gap-2">
           {chips.map(([mark, tone, label]) => (
@@ -51,7 +49,7 @@ export function Hero() {
             View My Work
             <Icon name="arrow" />
           </a>
-          <a href="/assets/cv-romer-necesario.pdf" download className="inline-flex items-center rounded-full border border-line bg-soft px-4 py-2.5 text-sm font-bold text-foreground">
+          <a href={CV_HREF} download={CV_DOWNLOAD_NAME} className="inline-flex items-center rounded-full border border-line bg-soft px-4 py-2.5 text-sm font-bold text-foreground">
             Download CV
           </a>
           <a href="#contact" className="inline-flex items-center rounded-full border border-line bg-soft px-4 py-2.5 text-sm font-bold text-foreground">
